@@ -52,7 +52,6 @@ var dealtCards = [],
 function flushInitialTransform() {
   var prefixed = Modernizr.prefixed('transform');
   prefixed = prefixed.charAt(0).toUpperCase() + prefixed.slice(1);
-  debugger;
   getComputedStyle(this)[prefixed];
 }
 
