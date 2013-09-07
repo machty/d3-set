@@ -50,7 +50,10 @@ var dealtCards = [],
     discardedCards = [];
 
 function flushInitialTransform() {
-  getComputedStyle(this).webkitTransform;
+  var prefixed = Modernizr.prefixed('transform');
+  prefixed = prefixed.charAt(0).toUpperCase() + prefixed.slice(1);
+  debugger;
+  getComputedStyle(this)[prefixed];
 }
 
 function getTransform(i, scale, entering, numColumns) {
@@ -60,7 +63,7 @@ function getTransform(i, scale, entering, numColumns) {
       y = scale(row * (CARD_HEIGHT + CARD_MARGIN) + CARD_MARGIN);
 
   var rotate = entering ? 'rotateY(90deg)' : 'rotateY(0deg)';
-  return '-webkit-transform: translate3d(' + x + 'px, ' + y + 'px, 0) scale(' + scale(1) + ')  ' + rotate;
+  return Modernizr.cssprefixed('transform') + ': translate3d(' + x + 'px, ' + y + 'px, 0) scale(' + scale(1) + ')  ' + rotate;
 }
 
 function render() {

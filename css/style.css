@@ -25,6 +25,9 @@ html, body {
 
   -webkit-transition: -webkit-transform 0.5s;
   -webkit-transform-origin: 0 0;
+
+  -moz-transition: -moz-transform 0.5s;
+  -moz-transform-origin: 0 0;
 }
 
 .shape-container {
@@ -69,9 +72,9 @@ html, body {
 .shape-2.fill-1 .shape-image { background-image: url(../images/squiggle-outline.png); }
 .shape-2.fill-2 .shape-image { background-image: url(../images/squiggle-stripe.png); }
 
-.color-0 .shape-color { background-color: red; }
-.color-1 .shape-color { background-color: green; }
-.color-2 .shape-color { background-color: blue; }
+.color-0 .shape-color { background-color: #2A25BB; }
+.color-1 .shape-color { background-color: #FF2F69; }
+.color-2 .shape-color { background-color: #33BB3E; }
 
 #deal-button {
   position: absolute;
